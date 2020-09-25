@@ -1,0 +1,38 @@
+{
+	"name": "shareto",
+	"version": "1.0.0",
+	"description": "封装社交网络分享插件",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "babel index.js --out-dir dist && npm run minify && npm run deploy",
+		"minify": "minify dist/index.js --mangle.keepClassName --deadcode.keepFnArgs --outFile dist/index.min.js",
+		"deploy": "npm publish",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@www.github.com:oikewll/shareto.git"
+	},
+	"homepage": "http://www.github.com/oikewll/shareto/-/blob/master/README.md",
+	"keywords": [
+		"weixin",
+		"tencent",
+		"weibo",
+		"share"
+	],
+	"author": "Hoanliu",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.19.2",
+		"weixin-js-sdk": "^1.6.0"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.10.5",
+		"@babel/core": "^7.10.5",
+		"@babel/plugin-proposal-private-methods": "^7.10.4",
+		"@babel/preset-env": "^7.10.4",
+		"@babel/preset-es2015": "^7.0.0-beta.53",
+		"babel-minify": "^0.5.1",
+		"babel-preset-stage-0": "^6.24.1"
+	}
+}
