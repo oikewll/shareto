@@ -4,16 +4,16 @@
 	"description": "封装社交网络分享插件",
 	"main": "dist/index.js",
 	"scripts": {
-		"build": "babel index.js --out-dir dist && npm run minify && npm run deploy",
-		"minify": "minify dist/index.js --mangle.keepClassName --deadcode.keepFnArgs --outFile dist/index.min.js",
+		"build": "npx babel index.js --out-dir dist && npm run minify && npm run deploy",
+		"minify": "npx minify dist/index.js --mangle.keepClassName --deadcode.keepFnArgs --outFile dist/index.min.js",
 		"deploy": "npm publish",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@www.github.com:oikewll/shareto.git"
+		"url": "git@github.com:oikewll/shareto.git"
 	},
-	"homepage": "http://www.github.com/oikewll/shareto/-/blob/master/README.md",
+	"homepage": "https://github.com/oikewll/shareto/blob/master/README.md",
 	"keywords": [
 		"weixin",
 		"tencent",
